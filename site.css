@@ -1,0 +1,71 @@
+nav 
+{
+    margin: 100px auto;
+    width: 50%;
+    height: 100px;
+    background: #9cb852ce;
+}
+ 
+nav .main_pages 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+nav .main_pages a 
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+ 
+nav a:hover 
+{
+    background: #75c288
+}
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 991px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .main_pages 
+    {
+        display: none;
+        flex-direction: column;
+        background: #c2b7ec;
+        height: 220px;
+    }
+ 
+    nav .main_pages a {
+        width: 50%;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: rgb(11, 12, 12);
+        cursor: pointer;
+    }
+    #toggle:checked + .main_pages
+     {
+        display: flex;
+    }
+}
