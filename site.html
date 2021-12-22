@@ -10,19 +10,49 @@
 </head>
 
 <body>
-    <nav>
+    <header>
+        <nav>
 
-        <label for="toggle">☰</label>
-        <input type="checkbox" id="toggle">
-        <div class="main_pages">
-            <a href="#">Accueil</a>
-            <a href="#">Actualité</a>
-            <a href="#">Contact</a>
-            <a href="#">Urgence</a>
-            <a href="#">Service</a>
+            <label for="toggle">☰</label>
+            <input type="checkbox" id="toggle">
+            <div class="main_pages">
+                <a href="#">Accueil</a>
+                <a href="#">Actualité</a>
+                <a href="#">Contact</a>
+                <a href="#">Urgence</a>
+                <a href="#">Service</a>
 
+            </div>
+        </nav> 
+     </header>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 2</div>
+                <img src="Princesse au pré.png" style="width:100%">
+                <div class="text">Princesse au repos , journée tranquille .</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 2</div>
+                <img src="princesse fait un selfie.png" style="width:100%">
+                <div class="text">Princesse adore les selfies </div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-    </nav>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+  
     <footer>
         <form action="/ma-page-de-traitement" method="post">
             <div>
@@ -42,6 +72,7 @@
             </div>
         </form>
     </footer>
+    <script type="text/javascript" src="site.js"></script>
 </body>
 
 </html>
