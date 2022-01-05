@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="site.css">
-    <link rel="stylesheet" href="site.php">
+    <link rel="" href="site.php">
     <title>site e-commerce</title>
 </head>
 
@@ -61,29 +61,32 @@
                 <input type="text" id="name" name="user_name">
             </div>
             <div>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="user_prenom">
+            </div>
+            <div>
                 <label for="mail">e-mail :</label>
                 <input type="email" id="mail" name="user_mail">
             </div>
-            <tr>
-                <td>Adresse : </td>
-                <td><input type="text" name="adresse" /></td>
-                </tr>
-                <tr>
-                <td>Ville :</td>
-                <td><input type="text" name="ville" /></td>
-                </tr>
-                <tr>
-                <td>Code postal :</td>
-                <td><input type="text" name="code" maxlength="5"/></td>
-                </tr>
-                <tr>
+            <div>
+                <label for="adress">Adresse :</label>
+                <input type="text" name="adresse" />
+            </div>
+            <div>
+                <label for="ville">ville :</label>
+                <input type="text" name="ville" />
+            </div>
+            <label for="code_postal">code_postal :</label>
+            <input type="text" name="code" maxlength="5" />
+
             <div>
                 <label for="msg">Message :</label>
                 <textarea id="msg" name="user_message"></textarea>
             </div>
-            <div class="button">
-                <button type="submit">Envoyer le message</button>
-            </div>
+            <tr>
+                <td>CONFIRMER</td>
+                <td><input type="submit" value="ENVOI" /></td>
+            </tr>
         </form>
     </footer>
     <script type="text/javascript" src="site.js"></script>
