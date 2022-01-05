@@ -14,7 +14,7 @@
     <header>
         <nav>
 
-            <label for="toggle"style=" display: none; ">☰</label>
+            <label for="toggle" style=" display: none; ">☰</label>
             <input type="checkbox" id="toggle">
             <div class="main_pages">
                 <a href="#">Accueil</a>
@@ -24,36 +24,36 @@
                 <a href="#">Service</a>
 
             </div>
-        </nav> 
-     </header>
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
+        </nav>
+    </header>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 2</div>
-                <img src="Princesse au pré.png" style="width:100%">
-                <div class="text">Princesse au repos , journée tranquille .</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 2</div>
-                <img src="princesse fait un selfie.png" style="width:100%">
-                <div class="text">Princesse adore les selfies </div>
-            </div>
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 2</div>
+            <img src="Princesse au pré.png" style="width:100%">
+            <div class="text">Princesse au repos , journée tranquille .</div>
         </div>
-        <br>
 
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 2</div>
+            <img src="princesse fait un selfie.png" style="width:100%">
+            <div class="text">Princesse adore les selfies </div>
         </div>
-  
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
     <footer>
         <form action="/ma-page-de-traitement" method="post">
             <div>
@@ -64,6 +64,19 @@
                 <label for="mail">e-mail :</label>
                 <input type="email" id="mail" name="user_mail">
             </div>
+            <tr>
+                <td>Adresse : </td>
+                <td><input type="text" name="adresse" /></td>
+                </tr>
+                <tr>
+                <td>Ville :</td>
+                <td><input type="text" name="ville" /></td>
+                </tr>
+                <tr>
+                <td>Code postal :</td>
+                <td><input type="text" name="code" maxlength="5"/></td>
+                </tr>
+                <tr>
             <div>
                 <label for="msg">Message :</label>
                 <textarea id="msg" name="user_message"></textarea>
