@@ -1,18 +1,5 @@
 <?php
-//connection a la bdd sql
-$user = 'root';
-$password = ''; //To be completed if you have set a password to root
-$database = 'projetalex'; //To be completed to connect to a database. The database must exist.
-$port = NULL; //Default must be NULL to use default port
-$mysql = new mysqli('127.0.0.1', $user, $password, $database, $port);
 
-if ($mysqli->connect_error) {
-    die('Connect Error (' . $mysqli->connect_error . ') '
-        . $mysqli->connect_error);
-}
-echo '<p>Connection OK ' . $mysqli->host_info . '</p>';
-echo '<p>Server ' . $mysqli->server_info . '</p>';
-echo '<p>Initial charset: ' . $mysqli->character_set_name() . '</p>';
 
 //formulaire
 echo "<table border=\"1\" >";
@@ -32,8 +19,8 @@ if (
     echo "<script type=\"text/javascript\">alert('Le formulaire est incomplet'); </script>";
 }
 
-
-class cheval
+//début des classes
+class cheval//classe qui concerne les chevaux
 {
     public $age;
     public $sexe;
@@ -50,7 +37,7 @@ class cheval
         return $this->taille = $taille;
     }
 }
-class commande
+class commande //class qui concerne les commandes
 {
     public $Numerodecommande;
     public $Adessedefacturation;
@@ -67,4 +54,4 @@ class commande
         $this->facture = $facture;
     }
 }
-$mysql->close();
+$mysql->close();//fermeture de la bdd
