@@ -1,7 +1,7 @@
 <?php
 // Permet de cacher les erreurs
 ini_set('display_errors',false);
-require_once('classeFormulaire.php');
+require_once('classe/classeFormulaire.php');
 ?>
 <html>
     <head>
@@ -9,7 +9,7 @@ require_once('classeFormulaire.php');
     </head>
     <body style="background: #9cb852ce;">
     <?php
-        $form = new Formulaire(array('name' =>'formulaire','action'=>'classeFormulaire.php'));
+        $form = new Formulaire(array('name' =>'formulaire','action'=>'classe/classeFormulaire.php'));
         //formulaire
 echo "<table border=\"1\" >";
 echo "<caption><b>Confirmation de vos coordonnées</b></caption>";
