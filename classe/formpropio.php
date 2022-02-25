@@ -1,7 +1,7 @@
 <?php
 // Permet de cacher les erreurs
-ini_set('display_errors',false);
-require_once('classe/classeFormulaire.php');
+// ini_set('display_errors',false);
+require_once('classeFormulaire.php');
 ?>
 <html>
     <head>
