@@ -67,6 +67,13 @@
    
     <footer>
         <a href="contact.php">contact</a>
+        <a href="#">politique de confidentialité</a>
+        <a href="#">cookie</a>
+        <a href="#">mention légale</a>
+        <a href="#">à propos de nous</a>
+
+
+
     
     </footer>
     <script type="text/javascript" src="site.js"></script>
