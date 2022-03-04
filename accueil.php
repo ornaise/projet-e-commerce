@@ -59,7 +59,7 @@
         <h2>présentation</h2>
         <p>.....................</p>
 
-        <img class="image" src="imgs/chevaux.png" alt='chevaux' align='right'>
+        <img class="image" src="imgs/chevaux.png" alt='chevaux' align='right'width= '70%'>
 
     </div>
    
@@ -67,9 +67,9 @@
    
     <footer>
         <a href="contact.php">contact</a>
-    <script type="text/javascript" src="site/site.js"></script>
+    
     </footer>
-
+    <script type="text/javascript" src="site.js"></script>
 
 </body>
 
