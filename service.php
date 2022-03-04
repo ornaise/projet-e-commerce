@@ -2,9 +2,9 @@
 	 // Vérifiez si le paramètre id est spécifié dans l'URL.  
 	 if (isset($_GET['id'])) {  
 	     // Pour éviter toute injection SQL, préparez l'instruction et exécutez-la.  
-	     $stmt = $pdo->prepare('SELECT * FROM service1 WHERE id = ?');  
+	     $stmt = $pdo->prepare('SELECT * FROM services WHERE id = ?');  
 	     $stmt->execute([$_GET['id']]);  
-	     /*  Récupérer le produit de la base de données et retourner le résultat sous forme de tableau.*/  
+	     /*  Récupérer le service de la base de données et retourner le résultat sous forme de tableau.*/  
 	     $service = $stmt->fetch(PDO::FETCH_ASSOC);  
 	     /* Vérifiez si le service existe (le tableau n'est pas vide)*/  
 	     if (!$service) {  
@@ -20,7 +20,7 @@
 
         <?=template_header('service')?>
 	<div class="service content-wrapper">
-	    <img src="imgs/<?=$produit['img']?>" width="500" height="500" alt="<?=$service['nom']?>">
+	    <img src="imgs/<?=$service['img']?>" width="500" height="500" alt="<?=$service['nom']?>">
 	    <div>
 	        <h1 class="name"><?=$service['nom']?></h1>
 	        <span class="price"> &dollar;<?=$service['prix']?>

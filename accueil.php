@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="site.css">
-    
+
     <title>site e-commerce</title>
 </head>
 
@@ -19,14 +19,14 @@
             <div class="main_pages">
                 <a href="#">Accueil</a>
                 <a href="#">Actualité</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="#">Urgence</a>
-                <a href="#">Service</a>
-                <a href="proprietaire.html">client</a>
+                <a href="serviceproprio.php">Service</a>
+                <a href="proprietaire.php">client</a>
 
             </div>
         </nav>
-       
+
     </header>
     <!-- Slideshow container -->
     <div class="slideshow-container">
@@ -34,13 +34,13 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 2</div>
-            <img src="Princesse au pré.png" style="width:100%">
+            <img src="imgs/Princesse au pré.png" style="width:100%">
             <div class="text">Princesse au repos , journée tranquille .</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 2</div>
-            <img src="princesse fait un selfie.png" style="width:100%">
+            <img src="imgs/princesse fait un selfie.png" style="width:100%">
             <div class="text">Princesse adore les selfies </div>
         </div>
         <!-- Next and previous buttons -->
@@ -58,49 +58,19 @@
     <div class="container">
         <h2>présentation</h2>
         <p>.....................</p>
-       
-        <img class="image" src="chevaux.png" alt='chevaux' align='right'>
-        
-    </div>
-    <?php
-// Obtenez les 4 services récemment ajoutés 
-$stmt = $pdo->prepare('SELECT * FROM service1 ORDER BY date_ajou DESC LIMIT 4');
-$stmt->execute();
-$recently_added_service1 = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
 
-<?= template_header('Home') ?>
-<div class="featured">
-    <h2>peur</h2>
-    <p>peur des bâche</p>
-</div>
-<div class="recentlyadded content-wrapper">
-    <h2>ajout de service </h2>
-    <div class="service1" width="100%">
-        <table style="margin: auto;">
-            <tr>
-                <?php foreach ($recently_added_service as $service) : ?>
-                    <td><a href="index.php?page=produit&id=<?= $service['id'] ?>" class="service">
-                            <img src="imgs/bache-cheval-marcher-peur.png?= $service['img'] ?>" width="150" height="150" alt="<?= $service['nom'] ?>"><br>
-                            <span class="name"><?= $service['nom'] ?></span><br>
-                            <span class="price">
-                                &dollar;<?= $service['prix'] ?>
-                                <?php if ($service['prix_Réel'] > 0) : ?>
-                                    <span class="prix_Réel">&dollar;<?= $service['prix_Réel'] ?></span>
-                                <?php endif; ?>
-                            </span>
-                        </a></td>
-                <?php endforeach; ?>
-            </tr>
-        </table>
+        <img class="image" src="imgs/chevaux.png" alt='chevaux' align='right'>
+
     </div>
-</div>
-<?= template_footer() ?>
+   
+
+   
     <footer>
-        <a href="contact.html">contact</a>
+        <a href="contact.php">contact</a>
+    <script type="text/javascript" src="site/site.js"></script>
     </footer>
 
-    
-    <script type="text/javascript" src="site.js"></script>
+
 </body>
 
 </html>

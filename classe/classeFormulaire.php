@@ -1,5 +1,5 @@
 <?php
-//debut des classs 
+//debut des classes 
 class Formulaire//classe pour le formulaire 
  {
     public $name;

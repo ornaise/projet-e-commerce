@@ -1,24 +1,27 @@
 	
 	<?php
-	 session_start();
-	function pdo_connect_mysql(){
-	    // Mettez à jour les détails ci-dessous avec les données de votre base de données MySQL.
-	    $DATABASE_HOST = 'localhost';
-	    $DATABASE_USER = 'root';
-	    $DATABASE_PASS = '';
-	    $DATABASE_NAME = 'projetalex';
-	    try {
-	 return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-	    } catch (PDOException $exception) {
-	   // S'il y a une erreur de connexion, arrêtez le script et affichez le message erreur.
-	      exit('Echec de la connexion à la base de données !');
-	    }
+	//squellete du site 
+	session_start();
+	function pdo_connect_mysql()
+	{
+		// Mettez à jour les détails ci-dessous avec les données de votre base de données MySQL.
+		$DATABASE_HOST = 'localhost';
+		$DATABASE_USER = 'root';
+		$DATABASE_PASS = '';
+		$DATABASE_NAME = 'projetalex';
+		try {
+			return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+		} catch (PDOException $exception) {
+			// S'il y a une erreur de connexion, arrêtez le script et affichez le message erreur.
+			exit('Echec de la connexion à la base de données !');
+		}
 	}
 	// Template de l'entete de notre page, vous pouvez le personnaliser.
-	function template_header($title) {
-	// Obtenez le nombre de services dans le panier, il sera affiché dans l'en-tête.
-	$num_items_in_panier = isset($_SESSION['panier'])? count($_SESSION['panier']) : 0;
-	echo <<<EOT
+	function template_header($title)
+	{
+		// Obtenez le nombre de services dans le panier, il sera affiché dans l'en-tête.
+		$num_items_in_panier = isset($_SESSION['panier']) ? count($_SESSION['panier']) : 0;
+		echo <<<EOT
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -32,7 +35,7 @@
 	  <div class="content-wrapper">
 	<h1>Shopping Panier System</h1>
 	   <nav>
-	   <a href="index.php" tite="accueil"><i class="fas fa-home"></i>Accueil </a>
+	   <a href="index.php" tite="accueil"><i class="fas fa-acceuil"></i>Accueil </a>
 	   <a href="index.php?page=service1" title="page des
 	services">service</a>
 	</nav>
@@ -45,9 +48,10 @@
 	EOT;
 	}
 	// Template pied de page
-	function template_footer() {
-	$year = date('Y');
-	echo <<<EOT
+	function template_footer()
+	{
+		$year = date('Y');
+		echo <<<EOT
 	        </main>
 	        <footer>
 	            <div class="content-wrapper">
