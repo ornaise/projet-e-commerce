@@ -94,7 +94,7 @@
 	main .featured {
 		display: flex;
 		flex-direction: column;
-		background-image: url(imgs/ecommerce.png);
+		background-image: url(imgs/images.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 400px;

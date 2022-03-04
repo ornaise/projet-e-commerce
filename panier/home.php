@@ -16,7 +16,7 @@ $recently_added_service1 = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
             <tr>
                 <?php foreach ($recently_added_service as $service) : ?>
                     <td><a href="index.php?page=produit&id=<?= $service['id'] ?>" class="service">
-                            <img src="imgs/<?= $service['img'] ?>" width="150" height="150" alt="<?= $service['nom'] ?>"><br>
+                            <img src="imgs/bache-cheval-marcher-peur.png?= $service['img'] ?>" width="150" height="150" alt="<?= $service['nom'] ?>"><br>
                             <span class="name"><?= $service['nom'] ?></span><br>
                             <span class="price">
                                 &dollar;<?= $service['prix'] ?>
