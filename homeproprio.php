@@ -20,7 +20,7 @@
     $stmt->execute();
     $recently_added_services = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
 
-    <?= template_header('serviceproprio') ?>
+    <?= template_header('homeproprio') ?>
     <div class="featured">
         <h2>peur</h2>
         <p>peur des bâches</p>
