@@ -1,3 +1,4 @@
+<?php include 'index.php'?>
 <!DOCTYPE html>
 <html>
 
@@ -9,14 +10,16 @@
 
     <title>service</title>
 </head>
+
 <body>
-<?php
+    <?php
     // Obtenez les 4 services récemment ajoutés 
+    //Représente une requête préparée
     $stmt = $pdo->prepare('SELECT * FROM services ORDER BY Date_de_debut DESC LIMIT 4');
     $stmt->execute();
     $recently_added_services = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
 
-    <?= template_header('accueil') ?>
+    <?= template_header('serviceproprio') ?>
     <div class="featured">
         <h2>peur</h2>
         <p>peur des bâche</p>
@@ -45,7 +48,7 @@
     <?= template_footer() ?>
     <footer>
         <a href="contact.php">contact</a>
-    <script type="text/javascript" src="site/site.js"></script>
+        <script type="text/javascript" src="site/site.js"></script>
     </footer>
 
 </body>

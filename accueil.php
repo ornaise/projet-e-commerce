@@ -23,6 +23,7 @@
                 <a href="#">Urgence</a>
                 <a href="serviceproprio.php">Service</a>
                 <a href="proprietaire.php">client</a>
+                <a href="panier.php">Panier</a>
 
             </div>
         </nav>

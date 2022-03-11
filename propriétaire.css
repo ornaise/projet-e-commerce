@@ -1,6 +1,6 @@
 body{
-    background-color: green;
-    background-image: url('imgs/images.png')no-repeat;
+    background-color: green!;
+    /* background-image: url('imgs/images.png')no-repeat!; */
 }
 
 nav 
@@ -43,7 +43,7 @@ nav a:hover
   display: grid;
   grid-template-columns: repeat(2,1fr); 
   grid-auto-rows: auto;
-  background-image: url(imgs/images.png);
+  background: no-repeat url(imgs/images.png);
 }
 .image {
   grid-column: 2/2;
@@ -56,6 +56,7 @@ form {
     padding: 1em;
     border: 4px solid #75c288;
     border-radius: 1em;
+    
   }
   
   form div + div {

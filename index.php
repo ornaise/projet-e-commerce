@@ -1,16 +1,25 @@
 	
 	<?php
-	/* Inclure des fonctions et se connecter à la base de données en utilisant PDO MySQL*/
-	
-	include'fonctions.php';
-	$pdo= pdo_connect_mysql();
+	//connexion a la base 
+	$db_host = 'localhost';
+	$db_username = 'root';
+	$db_password = '';
+	$db_name = 'projetalex';
 	
 
-    	
-	/* Si aucune autre page n'est renvoyée dans les parametres http, la Page (acceuil.php) est définie par défaut comme page d'accueil , de sorte que lorsque le visiteur se rend sur le site, c'est la page qui lui sera affichée.*/
-	$page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'accueil';
-	// Inclure et afficher la page demandée
-	include $page.'.php';
+	//On essaie de se connecter
+	try{
+		$pdo = pdo_connect_mysql( $db_host, $db_name, $db_username, $db_password);
+		
+		if(!$pdo) {
+			die("Erreur : " . pdo_connect_mysql_error());
+		}
+		echo "Connexion réussi";
+
+		//On ferme la connexion
+		pdo_close_mysql($pdo);
+		
+
 	?>
 	
 

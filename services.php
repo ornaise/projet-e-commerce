@@ -1,4 +1,5 @@
 <?php 
+include 'index.php';
 	/* Determiner le nombre de service à afficher sur chaque page*/
 	$nbr_services_sur_chaque_page = 2;
 	/* La page actuelle, apparaîtra dans l'URL  comme index.php?page=services&p=1 ou p=2 ce signifié la page 1 l& page 2 etc...*/

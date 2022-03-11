@@ -1,4 +1,6 @@
 <?php  
+
+	include 'index.php';
 	 // Vérifiez si le paramètre id est spécifié dans l'URL.  
 	 if (isset($_GET['id'])) {  
 	     // Pour éviter toute injection SQL, préparez l'instruction et exécutez-la.  
@@ -31,7 +33,7 @@
 	         <form action="index.php?page=panier" method="post">
 	             <input type="number" name="quantité" value="1" min="1" max="<?=$service['quantité']?>" placeholder="Quantité" required>
 	             <input type="hidden" name="service_id" value="<?=$service['id']?>">           
-                  <input type="submit" value="Ajouter au panier">
+                  <input type="submit" value="Ajouter_au_panier">
 	         </form>
 	         <div class="description">
 	             <?=$service['description']?>
