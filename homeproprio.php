@@ -1,4 +1,4 @@
-<?php include 'index.php'?>
+<?php include 'index.php' ?>
 <!DOCTYPE html>
 <html>
 
@@ -16,11 +16,11 @@
     <?php
     // Obtenez les 4 services récemment ajoutés 
     //Représente une requête préparée
-    $stmt = $pdo->prepare('SELECT * FROM services ORDER BY Date_de_debut DESC LIMIT 4');
+    $stmt = $pdo->prepare('SELECT * FROM service ORDER BY Date_de_debut DESC LIMIT 4');
     $stmt->execute();
     $recently_added_services = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
 
-    <?= template_header('homeproprio') ?>
+    <?php template_header('homeproprio') ?>
     <div class="featured">
         <h2>peur</h2>
         <p>peur des bâches</p>
@@ -30,14 +30,14 @@
         <div class="services" width="100%">
             <table style="margin: auto;">
                 <tr>
-                    <?php foreach ($recently_added_service as $services) : ?>
-                        <td><a href="index.php?page=service&id=<?= $service['id'] ?>" class="service">
-                                <img src="imgs/?= $service['img'] ?>" width="150" height="150" alt="<?= $service['nom'] ?>"><br>
-                                <span class="name"><?= $service['nom'] ?></span><br>
+                    <?php foreach ($recently_added_services as $service) : ?>
+                        <td><a href="index.php?page=service&id=<?php echo $service['Id_service'] ?>" class="service">
+                                <img src="imgs/<?php echo $service['imgs'] ?>" width="150" height="150" alt="<?php $service['nom'] ?>"><br>
+                                <span class="name"><?php $service['nom'] ?></span><br>
                                 <span class="price">
-                                    &dollar;<?= $service['prix'] ?>
-                                    <?php if ($service['prix_Réel'] > 0) : ?>
-                                        <span class="prix_Réel">&dollar;<?= $service['prix_Réel'] ?></span>
+                                    &dollar;<?php $service['prix'] ?>
+                                    <?php if ($service['prix-Reel'] > 0) : ?>
+                                        <span class="prix-Reel">&dollar;<?php $service['prix-Reel'] ?></span>
                                     <?php endif; ?>
                                 </span>
                             </a></td>
@@ -46,7 +46,7 @@
             </table>
         </div>
     </div>
-    <?= template_footer() ?>
+    <?php template_footer() ?>
     <footer>
         <a href="contact.php">contact</a>
         <a href="accueil.php">acceuil</a>

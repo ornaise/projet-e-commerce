@@ -7,7 +7,7 @@
 
 <body style="background: #9cb852ce;">
     <?php
-    $pdo = require 'classeFormulaire.php';
+    $pdo = require 'classe/classeFormulaire.php';
 
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         if (empty($_POST['nom']) and  empty($_POST['prenom']) and  empty($_POST['telephone']) and  empty($_POST['mail']) and  empty($_POST['password'])) {

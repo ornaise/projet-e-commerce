@@ -5,7 +5,7 @@
 	 if (isset($_GET['id'])) {  
 	     // Pour éviter toute injection SQL, préparez l'instruction et exécutez-la.  
 	     $stmt = $pdo->prepare('SELECT * FROM services WHERE Id_service');  
-	     $stmt->execute([$_GET['id']]);  
+	      $stmt->execute([$_GET['id']]);  
 	     /*  Récupérer le service de la base de données et retourner le résultat sous forme de tableau.*/  
 	     $service = $stmt->fetch(PDO::FETCH_ASSOC);  
 	     /* Vérifiez si le service existe (le tableau n'est pas vide)*/  
@@ -20,25 +20,25 @@
 	 ?>
 		
 
-        <?=template_header('service')?>
+        <?php template_header('service')?>
 	<div class="service content-wrapper">
-	    <img src="imgs/<?=$service['img']?>" width="500" height="500" alt="<?=$service['nom']?>">
+	    <img src="imgs/<?php $service['imgs']?>" width="500" height="500" alt="<?php $service['nom']?>">
 	    <div>
-	        <h1 class="name"><?=$service['nom']?></h1>
-	        <span class="price"> &dollar;<?=$service['prix']?>
-	              <?php if ($service['prix_Reel'] > 0): ?>
-	             <span class="prix_Reel"> &dollar;<?=$service['prix_Reel']?></span>
+	        <h1 class="name"><?php $service['nom']?></h1>
+	        <span class="price"> &dollar;<?php $service['prix']?>
+	              <?php if ($service['prix-Reel'] > 0): ?>
+	             <span class="prix-Reel"> &dollar;<?php $service['prix-Reel']?></span>
 	             <?php endif; ?>
 	         </span>
 	         <form action="index.php?page=panier" method="post">
-	             <input type="number" name="quantité" value="1" min="1" max="<?=$service['quantité']?>" placeholder="Quantité" required>
-	             <input type="hidden" name="service_id" value="<?=$service['id']?>">           
+	             <input type="number" name="quantité" value="1" min="1" max="<?php $service['quantité']?>" placeholder="Quantité" required>
+	             <input type="hidden" name="Id_service" value="<?php $service['Id_service']?>">           
                   <input type="submit" value="Ajouter_au_panier">
 	         </form>
 	         <div class="description">
-	             <?=$service['description']?>
+	             <?php $service['description']?>
 	         </div>
 	     </div></div>
-	 <?=template_footer()?>
+	 <?php template_footer()?>
 	
 
