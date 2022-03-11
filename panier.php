@@ -26,9 +26,7 @@
                 $_SESSION['panier'] = array($Id_service => $quantité);
             }
         }
-        // Empêcher la resoumission des formulaires...   
-        header('location: index.php?page=panier');
-        exit;
+      
     }
 
 
@@ -53,15 +51,13 @@
                 }
             }
         }
-        // Empêcher la re-soumission de formulaires...   
-        header('location: index.php?page=panier');
-        exit;
+        
     }
 
 
     /* Diriger l'utilisateur vers la page de commande s'il clique sur le bouton Passer la commande, le panier ne doit pas être vide.*/
     if (isset($_POST['placerCommande']) && isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
-        header('Location: index.php?page=placerCommade');
+        header(' placerCommande.php?placerCommande');
         exit;
     }
 
@@ -90,7 +86,7 @@
     ?>
 	<div class="panier content-wrapper">
 	    <h1>Panier d'achat</h1>
-	    <form action="index.php?page=panier" method="post">
+	    <form action="panier.php?page=panier" method="post">
 	        <table>
 	            <thead>
 	                <tr>
@@ -109,29 +105,29 @@
 	                    <?php foreach ($services as $service) : ?>
 	                        <tr>
 	                            <td class="imgs">
-	                                <a href="index.php?page=service&id=<?php $service['Id_service'] ?>">
-	                                    <img src="imgs/<?php $service['imgs'] ?>" width="50" height="50" alt="<?php $service['nom'] ?>">
+	                                <a href="service.php?id<?php echo $service['Id_service'] ?>">
+	                                    <img src="imgs/<?php echo $service['imgs'] ?>" width="50" height="50" alt="<?php $service['nom'] ?>">
 	                                </a>
 	                            </td>
-	                            <td><a href="index.php?page=service&id=<?php $service['Id_service'] ?>"><?php $service['nom'] ?></a>
+	                            <td><a href="service.php?id=<?php echo $service['Id_service'] ?>"><?php echo $service['nom'] ?></a>
 	                                <br>
-	                                <a href="index.php?page=panier&remove=<?php $service['Id_service'] ?>" class="remove"><i class="fas fa-trash">&nbsp;</i>Supprimer </a>
+	                                <a href="panier..php?remove=<?php echo $service['Id_service'] ?>" class="remove"><i class="fas fa-trash">&nbsp;</i>Supprimer </a>
 	                            </td>
-	                            <td class="prix">&dollar;<?php $service['prix'] ?></td>
-	                            <td class="quantité"><input type="number" name="quantité-<?php $service['Id_service'] ?>" value="<?php $services_in_panier[$service['Id_service']] ?>" min="1" max="<?php $service['quantité'] ?>" placeholder="quantité" required></td>
-	                            <td class="prix">&dollar;<?php $service['prix'] * $services_in_panier[$service['Id_service']] ?></td>
+	                            <td class="prix">&euro;<?php echo $service['prix'] ?></td>
+	                            <td class="quantité"><input type="number" name="quantité-<?php echo $service['Id_service'] ?>" value="<?php $services_in_panier[$service['Id_service']] ?>" min="1" max="<?php $service['quantité'] ?>" placeholder="quantité" required></td>
+	                            <td class="prix">&euro;<?php echo $service['prix'] * $services_in_panier[$service['Id_service']] ?></td>
 	                        </tr>
 	                    <?php endforeach; ?>
 	                <?php endif; ?>
 	            </tbody>
 	        </table>
 	        <div class="subtotal">
-	            <span class="text">Subtotal</span>
-	            <span class="prix">&dollar;<?php $subtotal ?></span>
+	            <span class="text">total</span>
+	            <span class="prix">&euro;<?php $subtotal ?></span>
 	        </div>
 	        <div class="buttons">
 	            <input type="submit" value="Mettre à jour" name="update">
-	            <input type="submit" value="Passer la commande" name="placerCommade">
+	            <input type="submit" value="Passer la commande" name="placerCommande">
 	        </div>
 	    </form>
 	</div>

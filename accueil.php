@@ -57,7 +57,7 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="container">
-        <h2>présentation</h2>
+        <h2>Présentation</h2>
         <p>.....................</p>
 
         <img class="image" src="imgs/chevaux.png" alt='chevaux' align='right'width= '70%'>

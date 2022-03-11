@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>service</title>
 </head>
@@ -22,22 +22,20 @@
 
     <?php template_header('homeproprio') ?>
     <div class="featured">
-        <h2>peur</h2>
-        <p>peur des bâches</p>
     </div>
     <div class="recentlyadded content-wrapper">
-        <h2>ajout de service </h2>
+        <h2>Liste des services</h2>
         <div class="services" width="100%">
             <table style="margin: auto;">
                 <tr>
                     <?php foreach ($recently_added_services as $service) : ?>
-                        <td><a href="index.php?page=service&id=<?php echo $service['Id_service'] ?>" class="service">
-                                <img src="imgs/<?php echo $service['imgs'] ?>" width="150" height="150" alt="<?php $service['nom'] ?>"><br>
-                                <span class="name"><?php $service['nom'] ?></span><br>
-                                <span class="price">
-                                    &dollar;<?php $service['prix'] ?>
+                        <td><a href="service.php?id=<?php echo $service['Id_service'] ?>" class="service">
+                                <img src="imgs/<?php echo $service['imgs'] ?>" width="150" height="150" alt="<?php echo $service['nom'] ?>"><br>
+                                <span class="name"><?php echo $service['nom'] ?></span><br>
+                                <span class="prix">
+                                    &euro;<?php echo $service['prix'] ?>
                                     <?php if ($service['prix-Reel'] > 0) : ?>
-                                        <span class="prix-Reel">&dollar;<?php $service['prix-Reel'] ?></span>
+                                        <span class="prix-Reel">&euro;<?php echo $service['prix-Reel'] ?></span>
                                     <?php endif; ?>
                                 </span>
                             </a></td>

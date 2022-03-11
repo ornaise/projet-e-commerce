@@ -1,5 +1,6 @@
 	
 	<?php
+	
 	//squellete du site 
 	session_start();
 	function pdo_connect_mysql()
@@ -33,14 +34,13 @@
 	<body>
 	  <header>
 	  <div class="content-wrapper">
-	<h1>Shopping Panier System</h1>
 	   <nav>
 	   <a href="accueil.php" title="accueil"><i class="fas fa-acceuil"></i>Accueil </a>
-	   <a href="index.php?page=services" title="page des
-	services">service</a>
+	   <a href="services.php" title="page des
+	services">services</a>
 	</nav>
 	<div class="link-icons">
-	   <a href="index.php?page=panier" title="panier d'achat"><i class="fas fa-shopping-panier">&nbsp;</i><spanstyle="color:#f00;background:#fff; border:solid 0.5px"> $num_items_in_panier</span></a>
+	   <a href="panier.php" title="panier d'achat"><i class="fa fa-shopping-panier">Panier</i><spanstyle="color:#7FFFD4;background:#fafad2; border:solid 0.5px"> $num_items_in_panier</span></a>
 	                </div>
 	            </div>
 	        </header>

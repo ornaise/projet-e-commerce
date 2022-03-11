@@ -44,7 +44,7 @@
           <label for="pass">Choisissez un mot de passe :</label>
           <input type="password" name="password">
         </div>
-        <input name="submit" class="btn btn-outline-warning" type="submit" value="Envoyer">
+        <input name="submit" class="submit" type="submit" value="Envoyer">
       </fieldset>
     </form>
   </div>
