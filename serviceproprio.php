@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <?php
     // Obtenez les 4 services récemment ajoutés 
     //Représente une requête préparée
@@ -22,14 +23,14 @@
     <?= template_header('serviceproprio') ?>
     <div class="featured">
         <h2>peur</h2>
-        <p>peur des bâche</p>
+        <p>peur des bâches</p>
     </div>
     <div class="recentlyadded content-wrapper">
         <h2>ajout de service </h2>
         <div class="services" width="100%">
             <table style="margin: auto;">
                 <tr>
-                    <?php foreach ($recently_added_service as $service) : ?>
+                    <?php foreach ($recently_added_service as $services) : ?>
                         <td><a href="index.php?page=service&id=<?= $service['id'] ?>" class="service">
                                 <img src="imgs/?= $service['img'] ?>" width="150" height="150" alt="<?= $service['nom'] ?>"><br>
                                 <span class="name"><?= $service['nom'] ?></span><br>
@@ -48,6 +49,7 @@
     <?= template_footer() ?>
     <footer>
         <a href="contact.php">contact</a>
+        <a href="accueil.php">acceuil</a>
         <script type="text/javascript" src="site/site.js"></script>
     </footer>
 

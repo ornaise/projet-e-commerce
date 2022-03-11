@@ -1,4 +1,5 @@
 	<?php
+    include 'index.php';
     /* Si l'utilisateur a cliqué sur le bouton "Ajouter au panier" sur la page du service, nous pouvons vérifier les données du formulaire.*/
     if (isset($_POST['service_id'], $_POST['quantité']) && is_numeric($_POST['service_id']) && is_numeric($_POST['quantité'])) {
         /* Définissez les variables post afin que nous puissions les identifier facilement, assurez-vous également qu'elles sont entières.*/

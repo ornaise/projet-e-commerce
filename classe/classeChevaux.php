@@ -1,4 +1,5 @@
 <?php
+include 'index.php';
 class cheval//classe qui concerne les chevaux
 {
     public $Nom_Cheval;

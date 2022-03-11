@@ -35,8 +35,8 @@
 	  <div class="content-wrapper">
 	<h1>Shopping Panier System</h1>
 	   <nav>
-	   <a href="index.php" tite="accueil"><i class="fas fa-acceuil"></i>Accueil </a>
-	   <a href="index.php?page=service1" title="page des
+	   <a href="accueil.php" title="accueil"><i class="fas fa-acceuil"></i>Accueil </a>
+	   <a href="index.php?page=services" title="page des
 	services">service</a>
 	</nav>
 	<div class="link-icons">

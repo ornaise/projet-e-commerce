@@ -32,11 +32,11 @@ class Formulaire//classe pour le formulaire
         
         echo '<form enctype="multipart/form-data" name="'.$this->name.'" method="'.$this->method.'" action="'.$this->action.'" class="'.$this->classe.'">';    
     }
-    private static function PDO($sql)
+    private static function PDO($pdo)
     {
-        global $db;
-        $db->prepare($sql);
-        if($sql->query())
+        global $pdo;
+        $pdo->prepare($pdo);
+        if($pdo->query())
              return true;
         
         else
@@ -219,17 +219,17 @@ class Formulaire//classe pour le formulaire
         global $_POST;
         global $_GET;
         global $_FILES;
-        global $db;
-        $sql = 'INSERT INTO `'.$table.'`SET';
+        global $pdo;
+        $pdo = 'INSERT INTO `'.$table.'`SET';
         $i =0;
         foreach($_POST as $key_post => $valeur_post)
         {
             if(is_array($valeur_post))
             {
                 if(count($_POST)< $i)
-                $sql.=''.$key_post.'='.$valeur_post.',';
+                $pdo.=''.$key_post.'='.$valeur_post.',';
                 else
-                $sql.=''.$key_post.'='.$valeur_post.',';
+                $pdo.=''.$key_post.'='.$valeur_post.',';
             }
             $i++;
         }
@@ -239,13 +239,13 @@ class Formulaire//classe pour le formulaire
             if(is_array($valeur_get))
             {
                 if(count($_GET)< $i)
-                $sql.=''.$key_get.'='.$valeur_get.',';
+                $pdo.=''.$key_get.'='.$valeur_get.',';
                 else
-                $sql.=''.$key_get.'='.$valeur_get.',';
+                $pdo.=''.$key_get.'='.$valeur_get.',';
             }
             $i++;
         }
-        Formulaire::PDO($sql);
+        Formulaire::PDO($pdo);
 
     }
     

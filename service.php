@@ -1,10 +1,10 @@
 <?php  
 
-	include 'index.php';
+	
 	 // Vérifiez si le paramètre id est spécifié dans l'URL.  
 	 if (isset($_GET['id'])) {  
 	     // Pour éviter toute injection SQL, préparez l'instruction et exécutez-la.  
-	     $stmt = $pdo->prepare('SELECT * FROM services WHERE id = ?');  
+	     $stmt = $pdo->prepare('SELECT * FROM services WHERE Id_service');  
 	     $stmt->execute([$_GET['id']]);  
 	     /*  Récupérer le service de la base de données et retourner le résultat sous forme de tableau.*/  
 	     $service = $stmt->fetch(PDO::FETCH_ASSOC);  
@@ -15,7 +15,7 @@
 	     }
 	 } else {  
 	     //  Erreur simple à afficher si l'id n'a pas été spécifié.  
-	     exit('le service n\'existe pas!');  
+	     exit('le service n\'existe pas car pas spécifié!');  
 	 }
 	 ?>
 		
@@ -26,8 +26,8 @@
 	    <div>
 	        <h1 class="name"><?=$service['nom']?></h1>
 	        <span class="price"> &dollar;<?=$service['prix']?>
-	              <?php if ($service['prix_Réel'] > 0): ?>
-	             <span class="prix_Réel"> &dollar;<?=$service['prix_Réel']?></span>
+	              <?php if ($service['prix_Reel'] > 0): ?>
+	             <span class="prix_Reel"> &dollar;<?=$service['prix_Reel']?></span>
 	             <?php endif; ?>
 	         </span>
 	         <form action="index.php?page=panier" method="post">

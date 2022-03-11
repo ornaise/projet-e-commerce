@@ -1,4 +1,5 @@
 <?php
+include 'index.php';
 class commande //class qui concerne les commandes
 {
     public $Numerodecommande;
