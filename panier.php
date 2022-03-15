@@ -1,5 +1,6 @@
 	<?php
     include 'index.php';
+    //include 'placerCommande.php';
     /* Si l'utilisateur a cliqué sur le bouton "Ajouter au panier" sur la page du service, nous pouvons vérifier les données du formulaire.*/
     if (isset($_POST['Id_service'], $_POST['quantité']) && is_numeric($_POST['Id_service']) && is_numeric($_POST['quantité'])) {
         /* Définissez les variables post afin que nous puissions les identifier facilement, assurez-vous également qu'elles sont entières.*/
@@ -86,7 +87,7 @@
     ?>
 	<div class="panier content-wrapper">
 	    <h1>Panier d'achat</h1>
-	    <form action="panier.php?page=panier" method="post">
+	    <form action="placerCommande.php" method="post">
 	        <table>
 	            <thead>
 	                <tr>
@@ -105,16 +106,16 @@
 	                    <?php foreach ($services as $service) : ?>
 	                        <tr>
 	                            <td class="imgs">
-	                                <a href="service.php?id<?php echo $service['Id_service'] ?>">
-	                                    <img src="imgs/<?php echo $service['imgs'] ?>" width="50" height="50" alt="<?php $service['nom'] ?>">
+	                                <a href="service.php?id=<?php echo $service['Id_service'] ?>">
+	                                    <img src="imgs/<?php echo $service['imgs'] ?>" width="50" height="50" alt="<?php echo $service['nom'] ?>">
 	                                </a>
 	                            </td>
 	                            <td><a href="service.php?id=<?php echo $service['Id_service'] ?>"><?php echo $service['nom'] ?></a>
 	                                <br>
-	                                <a href="panier..php?remove=<?php echo $service['Id_service'] ?>" class="remove"><i class="fas fa-trash">&nbsp;</i>Supprimer </a>
+	                                <a href="panier.php?remove=<?php echo $service['Id_service'] ?>" class="remove"><i class="fas fa-trash">&nbsp;</i>Supprimer </a>
 	                            </td>
 	                            <td class="prix">&euro;<?php echo $service['prix'] ?></td>
-	                            <td class="quantité"><input type="number" name="quantité-<?php echo $service['Id_service'] ?>" value="<?php $services_in_panier[$service['Id_service']] ?>" min="1" max="<?php $service['quantité'] ?>" placeholder="quantité" required></td>
+	                            <td class="quantité"><input type="number" name="quantité-<?php echo $service['Id_service'] ?>" value="<?php $services_in_panier[$service['Id_service']] ?>" min="1" max="<?php echo $service['quantité'] ?>" placeholder="quantité" required></td>
 	                            <td class="prix">&euro;<?php echo $service['prix'] * $services_in_panier[$service['Id_service']] ?></td>
 	                        </tr>
 	                    <?php endforeach; ?>
@@ -123,7 +124,7 @@
 	        </table>
 	        <div class="subtotal">
 	            <span class="text">total</span>
-	            <span class="prix">&euro;<?php $subtotal ?></span>
+	            <span class="prix">&euro;<?php echo $subtotal ?></span>
 	        </div>
 	        <div class="buttons">
 	            <input type="submit" value="Mettre à jour" name="update">
