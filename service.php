@@ -20,7 +20,7 @@
 	 ?>
 		
 
-        <?php template_header('service')?>
+      
 	<div class="service content-wrapper">
 	    <img src="imgs/<?php echo $service['imgs']?>" width="500" height="500" alt="<?php echo  $service['nom']?>">
 	    <div>
@@ -39,6 +39,6 @@
 	             <?php echo $service['description']?>
 	         </div>
 	     </div></div>
-	 <?php template_footer()?>
+	
 	
 

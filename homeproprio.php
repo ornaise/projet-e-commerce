@@ -20,7 +20,7 @@
     $stmt->execute();
     $recently_added_services = $stmt->fetchAll(PDO::FETCH_ASSOC); ?>
 
-    <?php template_header('homeproprio') ?>
+ 
     <div class="featured">
     </div>
     <div class="recentlyadded content-wrapper">
@@ -44,7 +44,7 @@
             </table>
         </div>
     </div>
-    <?php template_footer() ?>
+    
     <footer>
         <a href="contact.php">contact</a>
         <a href="accueil.php">acceuil</a>

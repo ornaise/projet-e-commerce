@@ -1,29 +1,24 @@
 <?php
-include 'index.php';
+
 class cheval//classe qui concerne les chevaux
 {
     public $Nom_Cheval;
-    public $age;
-    public $sexe;
-    public $poids;
-    public $race;
-    public $taille;
+    public $Sexe;
+    public $Race;
+    public $Taille;
+    public $id_localisation;
 
 
 
-    public function __construct($Nom_Cheval,$age, $sexe, $poids, $race, $taille)
+    public function __construct($Nom_Cheval, $Sexe, $Race, $Taille, $Id_localisation)
     {
         return $this->Nom_Cheval = $Nom_Cheval;
-        return $this->age = $age;
-        return  $this->sexe = $sexe;
-        return $this->poids = $poids;
-        return $this->race = $race;
-        return $this->taille = $taille;
+        return  $this->sexe = $Sexe;
+        return $this->race = $Race;
+        return $this->taille = $Taille;
+        return $this->localisation= $Id_localisation;
     }
     
 }
-    class AjoutCheval extends cheval {
-            
-    }
-$Nom_Cheval = new cheval($Nom_Cheval,$age,$sexe,$poids,$race,$taille);
+   
 ?>

@@ -1,6 +1,6 @@
 <?php 
-include 'fonctions.php';
-template_header( "placerCommande") 
+include 'index.php';
+
 	?>  
 	  <div class="placehorder content-wrapper">   
 	  <form method="post" action="classe/classeCommande.php">
@@ -11,4 +11,4 @@ template_header( "placerCommande")
 	  <p>Nous vous contacterons par e-mail avec les détails de votre commande.</p>   
 	  </form>
 	  </div>
-	  <?php template_footer()?>
+	 

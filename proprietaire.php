@@ -15,12 +15,12 @@
 
   <!--Les types de champs pour créer un formulaire-->
   <div class="container" id="form_page">
-    <form method="post" action="classe/formproprio.php">
+    <form method="post" action="formproprio.php">
       <fieldset class="p-5">
         <legend class="text-center h1">Informations Personnelles :</legend>
         <div class="row">
           <div class=" form-group col-md-6">
-            <label for="nom" class="">Nom de famille :</label>
+            <label for="nom" class="">Nom :</label>
             <input type="text" id="nom" class="form-control" name="nom">
           </div>
           <div class=" form-group  col-md-6">
@@ -35,16 +35,13 @@
             <label for="mail">Adresse mail :</label>
             <input type="email" class="form-control" id="mail" name="mail">
           </div>
-          <div class=" form-group col-md-6">
-            <label for="age">Age :</label>
-            <input type="number" class="form-control" id="age" name="age">
-          </div>
+
         </div>
         <div class="form-group col-md-6">
           <label for="pass">Choisissez un mot de passe :</label>
           <input type="password" name="password">
         </div>
-        <input name="submit" class="submit" type="submit" value="Envoyer">
+        <input name="submit" class="submit" id="submit" type="submit" value="suivant">
       </fieldset>
     </form>
   </div>

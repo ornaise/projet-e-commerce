@@ -30,6 +30,7 @@
 
     </header>
     <!-- Slideshow container -->
+    <h1>LES MURMURES D'ÉPONA</h1>
     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
@@ -57,15 +58,27 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="container">
-        <h2>Présentation</h2>
-        <p>.....................</p>
+        <div>
 
-        <img class="image" src="imgs/chevaux.png" alt='chevaux' align='right'width= '70%'>
+            <h2>Bonjour et Bienvenue</h2>
+            <p>Tous chevaux ayant subis un traumatisme même minime peut avoir besoin d’aide et tout propriétaire peut demander de l’aide pour l’aider .<br />
+
+                Pourquoi ? Vous avez remarquez un changement dans le comportement de votre cheval et vous ignorez quel comportement adopté, je sais que cela peut faire peur et vous met dans une position inconfortable vis à vis de votre compagnon qui était si calme et sans crainte .</br>
+
+                Sachez que vous n’êtes pas seul face à cela, comme l’homme a parfois besoin d’aide dans sa vie, les chevaux peuvent également avoir besoin d’une aide que vous n’arrivez pas à lui apporter dans l’immédiat. Mon premier conseil serait dans un premier temps de rester calme, c’est tout bête mais votre compagnon sera très réceptif à vos sentiments .</br>
+
+                Votre cheval malgré sa peur, si vous de votre coté vous restez calme cela l’aidera déjà énormément.</br>
+
+                Parlez lui, je sais, vous vous dîtes, mais que vais-je lui dire ? Je vous répondrais, parlez lui simplement de votre journée ou de vos souvenirs avec lui, cela l’aidera et vous aidera .</br>
+
+                Même si votre compagnon prend peur et a un comportement dangereux dû a la crainte, continuez de lui parler calmement et restez calme, ça ne sera pas facile devant le feu de l’action mais croyez-moi que cela aidera beaucoup votre compagnon et cela vous aidera également à garder ce lien précieux que vous avez crée tous les deux.</p>
+        </div>
+        <img class="image" src="imgs/chevaux.png" alt='chevaux' >
 
     </div>
-   
 
-   
+
+
     <footer>
         <a href="contact.php">contact</a>
         <a href="#">politique de confidentialité</a>
@@ -75,7 +88,7 @@
 
 
 
-    
+
     </footer>
     <script type="text/javascript" src="site.js"></script>
 

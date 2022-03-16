@@ -12,8 +12,7 @@
 	body {
 		position: relative;
 		min-height: 100%;
-		color: #555555;
-		background-color: #FFFFFF;
+		background-color: lightgoldenrodyellow;
 		margin: 20px;
 		padding-bottom: 100px; /* Same height as footer */
 		padding-left:2em;
@@ -28,10 +27,11 @@
 		margin: 0 auto;
 	}
 	header {
-		border-bottom: 1px solid #EEEEEE;
+		border-bottom: 1px solid #9cb852ce;
 	}
 	header .content-wrapper {
 		display: flex;
+		background:#9cb852ce
 	}
 	header h1 {
 		display: flex;

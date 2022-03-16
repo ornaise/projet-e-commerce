@@ -1,4 +1,5 @@
 <?php
+
 //debut des classes 
 class Formulaire//classe pour le formulaire 
  {

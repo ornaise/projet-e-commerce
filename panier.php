@@ -1,6 +1,5 @@
 	<?php
     include 'index.php';
-    //include 'placerCommande.php';
     /* Si l'utilisateur a cliqué sur le bouton "Ajouter au panier" sur la page du service, nous pouvons vérifier les données du formulaire.*/
     if (isset($_POST['Id_service'], $_POST['quantité']) && is_numeric($_POST['Id_service']) && is_numeric($_POST['quantité'])) {
         /* Définissez les variables post afin que nous puissions les identifier facilement, assurez-vous également qu'elles sont entières.*/
@@ -83,7 +82,7 @@
     }
     ?>
 
-	<?php template_header('Panier')
+	
     ?>
 	<div class="panier content-wrapper">
 	    <h1>Panier d'achat</h1>
@@ -132,7 +131,7 @@
 	        </div>
 	    </form>
 	</div>
-	<?php template_footer() ?>
+	
 
 
 

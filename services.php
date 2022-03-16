@@ -15,7 +15,7 @@ $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Obtenir le nombre total de services
 $total_services = $pdo->query('SELECT * FROM service')->rowCount();
 ?>
-<?php template_header('services') ?>
+
 <div class="services content-wrapper">
 	<h1>service</h1>
 	<p><?php $total_services ?> services</p>
@@ -46,4 +46,3 @@ $total_services = $pdo->query('SELECT * FROM service')->rowCount();
 		<?php endif; ?>
 	</div>
 </div>
-<?php template_footer() ?>
