@@ -24,15 +24,15 @@
             <input type="text" id="nom" class="form-control" name="nom">
           </div>
           <div class=" form-group  col-md-6">
-            <label for="prenom" class="">Prénom :</label>
+            <label for="prenom" class="">Prénom:</label>
             <input type="text" class="form-control" id="prenom" name="prenom">
           </div>
           <div class=" form-group col-md-6">
-            <label for="teléphone">Téléphone :</label>
+            <label for="teléphone">Téléphone:</label>
             <input type="text" class="form-control" id="téléphone" name="telephone">
           </div>
           <div class=" form-group col-md-6">
-            <label for="mail">Adresse mail :</label>
+            <label for="mail">Adresse mail</label>
             <input type="email" class="form-control" id="mail" name="mail">
           </div>
 
@@ -42,9 +42,6 @@
       </fieldset>
     </form>
   </div>
-</body>
-
-</html>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
     <?php
     include_once 'index.php';
     include_once 'login/register.php';
+    include_once 'login/login.php';
     require 'classe/classeFormulaire.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {

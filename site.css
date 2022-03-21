@@ -1,7 +1,9 @@
 body{
     background-color: lightgoldenrodyellow;
 }
-
+h1 {
+  text-align: center;
+}
 nav 
 {
     margin: 100px auto;
