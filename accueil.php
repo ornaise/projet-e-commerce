@@ -33,7 +33,7 @@
     <h1>LES MURMURES D'ÉPONA</h1>
     <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
+        <!--Images pleine largeur avec numéro et texte de légende -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 2</div>
             <img src="imgs/Princesse au pré.png" style="width:100%">
@@ -45,13 +45,13 @@
             <img src="imgs/princesse fait un selfie.png" style="width:100%">
             <div class="text">Princesse adore les selfies </div>
         </div>
-        <!-- Next and previous buttons -->
+        <!--Boutons suivant et précédent -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
 
-    <!-- The dots/circles -->
+    <!-- Les points/cercles -->
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>

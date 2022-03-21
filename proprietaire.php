@@ -37,10 +37,7 @@
           </div>
 
         </div>
-        <div class="form-group col-md-6">
-          <label for="pass">Choisissez un mot de passe :</label>
-          <input type="password" name="password">
-        </div>
+       
         <input name="submit" class="submit" id="submit" type="submit" value="suivant">
       </fieldset>
     </form>
