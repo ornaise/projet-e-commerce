@@ -83,7 +83,27 @@
     ?>
 
 	
-    ?>
+    <head>
+    <link rel="stylesheet" href="panier.css">
+    </head>
+    <header>
+        <nav>
+
+            <label for="toggle" style=" display: none; ">☰</label>
+            <input type="checkbox" id="toggle">
+            <div class="main_pages">
+                <a href="#">Accueil</a>
+                <a href="#">Actualité</a>
+                <a href="contact.php">Contact</a>
+                <a href="#">Urgence</a>
+                <a href="homeproprio.php">Service</a>
+                <a href="proprietaire.php">client</a>
+                <a href="panier.php">Panier</a>
+
+            </div>
+        </nav>
+
+    </header>
 	<div class="panier content-wrapper">
 	    <h1>Panier d'achat</h1>
 	    <form action="placerCommande.php" method="post">
@@ -142,4 +162,4 @@
 
 
 
-	?>
+	

@@ -20,10 +20,7 @@
                 <a href="#">Accueil</a>
                 <a href="#">Actualité</a>
                 <a href="contact.php">Contact</a>
-                <a href="#">Urgence</a>
-                <a href="homeproprio.php">Service</a>
                 <a href="proprietaire.php">client</a>
-                <a href="panier.php">Panier</a>
 
             </div>
         </nav>
