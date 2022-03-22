@@ -1,6 +1,46 @@
 body {
     background: #9cb852ce;
 }
+
+h1 {
+  text-align: center;
+}
+nav 
+{
+    margin: 100px auto;
+    width: 50%;
+    height: 100px;
+    background: #9cb852ce;
+}
+ 
+nav .main_pages 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -17px;
+}
+ 
+nav .main_pages a 
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+ 
+nav a:hover 
+{
+    background: #75c288
+}
+ #toggle
+{
+    display: none;
+}
 .box {
     border: 1px solid #c4c4c4;
     padding: 30px 25px 10px 25px;

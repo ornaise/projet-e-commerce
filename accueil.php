@@ -20,7 +20,8 @@
                 <a href="#">Accueil</a>
                 <a href="#">Actualité</a>
                 <a href="contact.php">Contact</a>
-                <a href="proprietaire.php">client</a>
+                <a href="proprietaire.php">s'enregistrer</a>
+                <a href="login/login.php">connexion</a>
 
             </div>
         </nav>
