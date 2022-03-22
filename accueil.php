@@ -82,7 +82,7 @@
         <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees">politique de confidentialité</a>
         <a href="https://www.cnil.fr/fr/cookies-et-traceurs-que-dit-la-loi">cookie</a>
         <a href="#">mention légale</a>
-        <a href="#">à propos de nous</a>
+        <a href="alex.php">à propos de nous</a>
 
 
 
