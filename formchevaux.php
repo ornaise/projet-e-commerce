@@ -1,6 +1,6 @@
 <?php
 include_once 'index.php';
-include_once 'login/register.php';
+//include_once 'login/register.php';
 
 require 'classe/classeFormulaire.php';
 
