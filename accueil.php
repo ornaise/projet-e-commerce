@@ -20,6 +20,7 @@
                 <a href="#">Accueil</a>
                 <a href="#">Actualité</a>
                 <a href="contact.php">Contact</a>
+                <a href="homeproprio.php">Service</a>
                 <a href="proprietaire.php">s'enregistrer</a>
                 <a href="login/login.php">connexion</a>
 
